@@ -20,6 +20,16 @@
         app:srcCompat="@drawable/illustration" />
 
 
+    <TextView
+        android:id="@+id/guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip Authorization"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="687dp" />
+
     <Button
         android:id="@+id/signinbut"
         android:layout_width="160dp"
@@ -34,21 +44,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+
     <Button
         android:id="@+id/signupbut"
         android:layout_width="160dp"
         android:layout_height="65dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="20dp"
-        android:text="Sign Up"
-        android:textSize="16dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/white_dark"
+        android:text="Sign Up"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-
-
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/isecondpage_withoutinter_but"
