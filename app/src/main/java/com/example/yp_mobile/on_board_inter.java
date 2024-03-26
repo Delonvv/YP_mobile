@@ -15,19 +15,20 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.example.yp_mobile.databinding.ActivityOnBoardingScreenBinding;
 import com.google.firebase.auth.FirebaseAuth;
+
+
 public class on_board_inter extends AppCompatActivity {
 
-    private on_board_inter binding;
+    private ActivityOnBoardingScreenBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = on_board_inter.inflate(getLayoutInflater());
+        binding = ActivityOnBoardingScreenBinding.inflate(getLayoutInflater());
         setContentView(R.layout.on_boarding1);
-    }
 
+    }
     int start_x = 0;
     int end_x = 0;
     @Override
@@ -51,16 +52,16 @@ public class on_board_inter extends AppCompatActivity {
             {
                 setContentView(R.layout.on_boarding2);
                 Button sign_in = findViewById(R.id.signinbut);
-                Button sign_up = findViewById(R.id.signupbut);
-                TextView guest = findViewById(R.id.guest);
-                if (isnetworkAv(getApplicationContext())) {
-                    guest.setVisibility(View.GONE);
+                Button sign_up = findViewById(R.id.signinbut);
+                TextView goust = findViewById(R.id.guest);
+                if (isNetworkAvailable(getApplicationContext())) {
+                    goust.setVisibility(View.GONE);
 
                 } else {
-                    guest.setVisibility(View.VISIBLE);
+                    goust.setVisibility(View.VISIBLE);
                 }
-                guest.setOnClickListener(v -> {
-                    // Дописать startActivity(new Intent(on_board_inter.this,.class));
+                goust.setOnClickListener(v -> {
+                    startActivity(new Intent(on_board_inter.this,LaunchScreen.class));
                 });
                 sign_in.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -82,13 +83,10 @@ public class on_board_inter extends AppCompatActivity {
         }
         return false;
     }
-
-    public boolean isnetworkAv(Context context) {
+    public boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
 
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-    }
-    private static on_board_inter inflate(LayoutInflater layoutInflater) {
     }
 }
