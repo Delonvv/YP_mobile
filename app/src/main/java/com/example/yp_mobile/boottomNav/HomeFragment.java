@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.yp_01.DbHelper;
-import com.example.yp_01.boottomNav.Menu.MenuAdapter;
-import com.example.yp_01.boottomNav.Menu.MenuClass;
-import com.example.yp_01.boottomNav.SelectedItem.SelectedItemAdapter;
-import com.example.yp_01.boottomNav.SelectedItem.SelectedItemClass;
-import com.example.yp_01.databinding.FragmentHomeBinding;
+import com.example.yp_mobile.Connection;
+import com.example.yp_mobile.boottomNav.Menu.MenuAdapter;
+import com.example.yp_mobile.boottomNav.Menu.MenuClass;
+import com.example.yp_mobile.boottomNav.SelectedItem.SelectedItemAdapter;
+import com.example.yp_mobile.boottomNav.SelectedItem.SelectedItemClass;
+import com.example.yp_mobile.databinding.FragmentHomeBinding;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -103,7 +103,7 @@ public class HomeFragment extends Fragment implements MenuAdapter.OnMenoClickLis
     }
     public void loadItem(){
         ArrayList<MenuClass> search = new ArrayList<>();
-        DbHelper dbHelper = new DbHelper(getContext());
+        Connection dbHelper = new Connection(getContext());
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery( "SELECT * FROM foods WHERE name LIKE '%"+binding.mealSearch.getText().toString()+"%' " +
                 "UNION " +

@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.yp_01.R;
+import com.example.yp_mobile.R;
 
 public class MenuViewHolder extends RecyclerView.ViewHolder{
     TextView name;

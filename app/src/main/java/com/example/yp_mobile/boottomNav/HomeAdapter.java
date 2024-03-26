@@ -4,10 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.yp_01.boottomNav.MenuFragment.DrinksFragment;
-import com.example.yp_01.boottomNav.MenuFragment.FoodsFragment;
-import com.example.yp_01.boottomNav.MenuFragment.SauceFragment;
-import com.example.yp_01.boottomNav.MenuFragment.SnacksFragment;
+import com.example.yp_mobile.boottomNav.MenuFragment.DrinksFragment;
+import com.example.yp_mobile.boottomNav.MenuFragment.FoodsFragment;
+import com.example.yp_mobile.boottomNav.MenuFragment.SauceFragment;
+import com.example.yp_mobile.boottomNav.MenuFragment.SnacksFragment;
 
 public class HomeAdapter extends FragmentStateAdapter {
     public HomeAdapter(@NonNull Fragment fragment) {

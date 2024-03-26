@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.yp_01.OneItemScreen;
-import com.example.yp_01.R;
+import com.example.yp_mobile.OnItem;
+import com.example.yp_mobile.R;
 
 import java.util.ArrayList;
 
@@ -77,7 +77,7 @@ public class SelectedItemAdapter extends RecyclerView.Adapter<SelectedItemViewHo
         holder.itemView.findViewById(R.id.bntContinueShop).setOnClickListener(v -> {
             if (listener != null) {
                 Context context = holder.itemView.getContext();
-                Intent intent = new Intent(context, OneItemScreen.class);
+                Intent intent = new Intent(context, OnItem.class);
 
                 intent.putExtra("name", item.name);
                 intent.putExtra("price", item.price);
@@ -89,7 +89,7 @@ public class SelectedItemAdapter extends RecyclerView.Adapter<SelectedItemViewHo
         holder.itemView.findViewById(R.id.more).setOnClickListener(v -> {
             if (listener != null) {
                 Context context = holder.itemView.getContext();
-                Intent intent = new Intent(context, OneItemScreen.class);
+                Intent intent = new Intent(context, OnItem.class);
 
                 intent.putExtra("name", item.name);
                 intent.putExtra("price", item.price);

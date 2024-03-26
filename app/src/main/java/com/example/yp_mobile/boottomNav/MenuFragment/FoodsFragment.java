@@ -14,12 +14,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.yp_01.DbHelper;
-import com.example.yp_01.boottomNav.Menu.MenuAdapter;
-import com.example.yp_01.boottomNav.Menu.MenuClass;
-import com.example.yp_01.boottomNav.SelectedItem.SelectedItemAdapter;
-import com.example.yp_01.boottomNav.SelectedItem.SelectedItemClass;
-import com.example.yp_01.databinding.FragmentFoodsBinding;
+import com.example.yp_mobile.Connection;
+import com.example.yp_mobile.boottomNav.Menu.MenuAdapter;
+import com.example.yp_mobile.boottomNav.Menu.MenuClass;
+import com.example.yp_mobile.boottomNav.SelectedItem.SelectedItemAdapter;
+import com.example.yp_mobile.boottomNav.SelectedItem.SelectedItemClass;
+import com.example.yp_mobile.databinding.FragmentFoodsBinding;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,7 @@ public class FoodsFragment extends Fragment implements MenuAdapter.OnMenoClickLi
     }
     public void loadItem(){
         ArrayList<MenuClass> foods = new ArrayList<>();
-        DbHelper dbHelper = new DbHelper(getContext());
+        Connection dbHelper = new Connection(getContext());
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM foods", null);
 

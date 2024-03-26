@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.yp_01.R;
+import com.example.yp_mobile.R;
 
 import java.util.ArrayList;
 
