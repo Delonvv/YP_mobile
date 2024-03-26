@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import com.example.yp_mobile.databinding.MainScreenBinding;
+import com.example.yp_mobile.main_elements.MainFragment;
 public class MainScreen extends AppCompatActivity  {
     private MainScreen binding;
 
