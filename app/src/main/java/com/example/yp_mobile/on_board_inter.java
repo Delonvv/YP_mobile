@@ -16,7 +16,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
+import com.example.yp_mobile.databinding.ActivityOnBoardingScreenBinding;
+import com.google.firebase.auth.FirebaseAuth;
 public class on_board_inter extends AppCompatActivity {
 
     private on_board_inter binding;

@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.yp_mobile.databinding.ActivitySignInScreenBinding;
-import com.example.yp_01.databinding.ActivitySingUpScreenBinding;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,16 +37,16 @@ public class SignIn extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         if (task.isSuccessful()) {
-                                            startActivity(new Intent(sign_in_screen.this, LaunchScreen.class));
+                                            startActivity(new Intent(SignIn.this, LaunchScreen.class));
                                             finish();
                                         } else
                                             Toast.makeText(v.getContext(), "Польватель не найден", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                     } else
-                        Toast.makeText(v.getContext(), "Не верная почта", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(v.getContext(), "Укажите почту нормально", Toast.LENGTH_SHORT).show();
                 } else
-                    Toast.makeText(v.getContext(), "Заполните все поля", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(), "Не все поля заполнены", Toast.LENGTH_SHORT).show();
             }
         });
 
