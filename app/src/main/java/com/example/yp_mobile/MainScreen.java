@@ -5,18 +5,22 @@ import android.view.LayoutInflater;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.navigation.NavigationBarView;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainScreen extends AppCompatActivity  {
     private MainScreen binding;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = MainScreen.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        getSupportFragmentManager().beginTransaction().replace(binding.fragmentContainer.getId(),new HomeFragment()).commit();
-        binding.bottomNav.setSelectedItemId(R.id.home);
+        getSupportFragmentManager().beginTransaction().replace(binding.fragment_container.getId(),new HomeFragment()).commit();
+        binding.bottom_nav.setSelectedItemId(R.id.home);
         Map<Integer, Fragment> fragmentMap = new HashMap<>();
         fragmentMap.put(R.id.home,new HomeFragment());
         binding.bottomNav.setOnItemSelectedListener(item -> {

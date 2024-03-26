@@ -7,6 +7,12 @@
     tools:context=".MainScreen"
     android:background="@color/white_main">
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="410dp"
+        android:layout_height="508dp"
+        tools:layout_editor_absoluteY="143dp" />
+
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="35dp"
