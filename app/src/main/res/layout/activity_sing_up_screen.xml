@@ -17,7 +17,7 @@
             android:background="@drawable/liner_radius">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="431dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/cooking" />
@@ -68,13 +68,17 @@
                 android:layout_height="wrap_content"/>
             <Button
                 android:id="@+id/register"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/orange"
                 android:layout_marginTop="20dp"
                 android:text="@string/register"
                 android:background="@drawable/btn_radius"/>
             <Button
                 android:id="@+id/cancel"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"

@@ -20,7 +20,7 @@
             android:background="@drawable/rect">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="444dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="50dp"
                 android:src="@drawable/cooking" />
