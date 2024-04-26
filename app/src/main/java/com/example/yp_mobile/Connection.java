@@ -35,7 +35,7 @@ public class Connection extends SQLiteOpenHelper {
     }
     public void clearTable() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete("tableyp", null, null);
+        db.delete("tableyp ", null, null);
         db.close();
     }
 }
